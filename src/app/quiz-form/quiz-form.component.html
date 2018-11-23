@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <form (ngSubmit)="onSubmit(quizForm)" #quizForm="ngForm">
+      <div class="col-xl-5 col-md-5 ">
+        <div class="form-group">
+          <h3>QUESTION NO. {{id}}</h3>
+          <input type="number" name="questionId" class="form-control" ngModel placeholder="Question ID">
+          <input type="text" name="question" class="form-control" ngModel placeholder="Question here">
+          <input type="number" name="answer" ngModel placeholder="Answer" class="form-control">
+          <button type="submit" >Save</button>
+        </div>
+      </div>
+      <div class="col-xl-7 col-md-7">
+        <div class="form-group" >
+          <input type="text" name="option0" ngModel class="form-control"  placeholder="Option 1 here">
+          <input type="text" name="option1" ngModel class="form-control"  placeholder="Option 2 here">
+          <input type="text" name="option2" ngModel class="form-control"  placeholder="Option 3 here">
+          <input type="text" name="option3" ngModel class="form-control"  placeholder="Option 4 here">
+        </div>
+    </div>
+  </form>
+  <button class="btn btn-info" (click)="loadNextQues(quizForm)">Next</button>
+  </div>
+</div>

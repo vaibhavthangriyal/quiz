@@ -1,0 +1,15 @@
+<div class="container-fluid ">
+  <div  class="row bg-danger ">
+    <div class="d-flex justify-content-center ">
+      <ul class="list-group justify-content-center mx-auto ">
+        <li class="list-group-item bg-primary"  *ngFor="let opt of service.quiz[0].options; let i = index">
+        <a class="">
+          <button class="btn-danger list-group-item list-group-item-action" (click)="onAnsSelected(i,this.service.currentQuestionID)">
+            {{service.quiz[service.currentQuestionID].options[i]}}
+          </button>
+        </a>  
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
